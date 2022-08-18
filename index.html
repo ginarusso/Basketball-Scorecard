@@ -1,0 +1,28 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <h4 id="header">First to 21 Wins!</h4>
+        </header>
+        <section>
+            <div class="container">
+                <div>
+                    <h3>HOME</h3>
+                    <p id="home-score" class="home">0</p>
+                    <button id="btn1-home" onclick="home1()">+1</button><button id="btn2-home" onclick="home2()">+2</button><button id="btn3-home" onclick="home3()">+3</button>
+                </div>
+                <div>
+                    <h3>GUEST</h3>
+                    <p id="guest-score" class="guest">0</p>
+                    <button id="btn1-guest" onclick="guest1()">+1</button><button id="btn2-guest" onclick="guest2()">+2</button><button id="btn3-guest" onclick="guest3()">+3</button>
+                </div>
+            </div>
+        </section>
+            <footer>
+            <button id="footer" class="footer-btn" onclick="reset()">RESET</button>
+            </footer>
+        <script src="index.js"></script>
+    </body>
+</html>
