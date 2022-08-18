@@ -1,16 +1,15 @@
 const homeScore = document.getElementById("home-score")
 const guestScore = document.getElementById("guest-score")
-const gameIsOver = document.getElementById("game-over")
 const header = document.getElementById("header")
+const h3ElHome = document.getElementById("h3-el-home")
+const h3ElGuest = document.getElementById("h3-el-guest")
 const btn1Home = document.getElementById("btn1-home")
 const btn2Home = document.getElementById("btn2-home")
 const btn3Home = document.getElementById("btn3-home")
 const btn1Guest = document.getElementById("btn1-guest")
 const btn2Guest = document.getElementById("btn2-guest")
 const btn3Guest = document.getElementById("btn3-guest")
-const countdownbtn = document.getElementById("countdown-timer")
 const footerbtn = document.getElementById("footer")
-let counter = 10
 
 let homeCounter = 0;
 let guestCounter = 0;
@@ -50,8 +49,12 @@ function reset() {
     guestScore.textContent = 0
     document.getElementById("header").style.color = 'red';
     header.innerHTML = "First to 21 Wins!"
-    document.getElementById("footer").style.backgroundColor = 'black';
+    document.getElementById("footer").style.backgroundColor = 'black'
     footerbtn.innerHTML = "RESET"
+    document.getElementById("h3-el-home").style.textShadow = '-5px -5px #1B244A';
+    h3ElHome.innerHTML = "HOME"
+    document.getElementById("h3-el-guest").style.textShadow = '-5px -5px #1B244A';
+    h3ElGuest.innerHTML = "GUEST"
     btn1Home.disabled = false
     btn2Home.disabled = false
     btn3Home.disabled = false
@@ -61,20 +64,11 @@ function reset() {
 }
 
 function disable() {
-    if (guestCounter >= 21 && guestCounter > 0) {
-        document.getElementById("header").style.color = 'green';
-        header.innerHTML = "Guest Wins!"
-        document.getElementById("footer").style.backgroundColor = 'red';
-        footerbtn.innerHTML = "RESET"
-        btn1Home.disabled = true
-        btn2Home.disabled = true
-        btn3Home.disabled = true
-        btn1Guest.disabled = true
-        btn2Guest.disabled = true
-        btn3Guest.disabled = true
-    } else if (homeCounter >= 21 && homeCounter > 0) {
-        document.getElementById("header").style.color = 'orange';
+    if (homeCounter >= 21 && homeCounter > 0) {
+        document.getElementById("header").style.color = 'darkorange';
         header.innerHTML = "Home Wins!"
+        document.getElementById("h3-el-home").style.textShadow = '5px 5px darkorange';
+        h3ElHome.innerHTML = "HOME"
         document.getElementById("footer").style.backgroundColor = 'red';
         footerbtn.innerHTML = "RESET"
         btn1Home.disabled = true
@@ -83,5 +77,18 @@ function disable() {
         btn1Guest.disabled = true
         btn2Guest.disabled = true
         btn3Guest.disabled = true
-    }
+        } else if (guestCounter >= 21 && guestCounter > 0) {
+            document.getElementById("header").style.color = '#008000';
+            header.innerHTML = "Guest Wins!"
+            document.getElementById("h3-el-guest").style.textShadow = '5px 5px #008000';
+            h3ElGuest.innerHTML = "GUEST"
+            document.getElementById("footer").style.backgroundColor = 'red';
+            footerbtn.innerHTML = "RESET"
+            btn1Home.disabled = true
+            btn2Home.disabled = true
+            btn3Home.disabled = true
+            btn1Guest.disabled = true
+            btn2Guest.disabled = true
+            btn3Guest.disabled = true
+            }
 }
