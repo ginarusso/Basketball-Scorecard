@@ -48,12 +48,14 @@ function reset() {
     homeScore.textContent = 0
     guestScore.textContent = 0
     document.getElementById("header").style.color = 'red';
+    document.getElementById("header").style.textShadow = '-2px -2px #000000';
     header.innerHTML = "First to 21 Wins!"
     document.getElementById("footer").style.backgroundColor = 'black'
     footerbtn.innerHTML = "RESET"
-    document.getElementById("h3-el-home").style.textShadow = '-5px -5px #1B244A';
-    h3ElHome.innerHTML = "HOME"
-    document.getElementById("h3-el-guest").style.textShadow = '-5px -5px #1B244A';
+    // document.getElementById("h3-el-home").style.textShadow = '-5px -5px #1B244A';
+    document.getElementById("home-score").className = "home"
+    // document.getElementById("h3-el-guest").style.textShadow = '-5px -5px #1B244A';
+    document.getElementById("guest-score").className = "guest"
     h3ElGuest.innerHTML = "GUEST"
     btn1Home.disabled = false
     btn2Home.disabled = false
@@ -65,10 +67,11 @@ function reset() {
 
 function disable() {
     if (homeCounter >= 21 && homeCounter > 0) {
-        document.getElementById("header").style.color = 'darkorange';
+        document.getElementById("header").style.color = '#008000';
         header.innerHTML = "Home Wins!"
-        document.getElementById("h3-el-home").style.textShadow = '5px 5px darkorange';
-        h3ElHome.innerHTML = "HOME"
+        // document.getElementById("h3-el-home").style.textShadow = '5px 5px darkorange';
+        // h3ElHome.innerHTML = "HOME"
+        document.getElementById("home-score").className = "border"
         document.getElementById("footer").style.backgroundColor = 'red';
         footerbtn.innerHTML = "RESET"
         btn1Home.disabled = true
@@ -80,8 +83,9 @@ function disable() {
         } else if (guestCounter >= 21 && guestCounter > 0) {
             document.getElementById("header").style.color = '#008000';
             header.innerHTML = "Guest Wins!"
-            document.getElementById("h3-el-guest").style.textShadow = '5px 5px #008000';
-            h3ElGuest.innerHTML = "GUEST"
+            // document.getElementById("h3-el-guest").style.textShadow = '5px 5px #008000';
+            // h3ElGuest.innerHTML = "GUEST"
+            document.getElementById("guest-score").className = "border"
             document.getElementById("footer").style.backgroundColor = 'red';
             footerbtn.innerHTML = "RESET"
             btn1Home.disabled = true
