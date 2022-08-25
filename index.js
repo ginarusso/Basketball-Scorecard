@@ -96,3 +96,8 @@ function disable() {
             btn3Guest.disabled = true
             }
 }
+
+function confetti() {
+    const jsConfetti = new JSConfetti()
+    jsConfetti.addConfetti()
+}
