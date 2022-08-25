@@ -69,6 +69,7 @@ function disable() {
     if (homeCounter >= 21 && homeCounter > 0) {
         document.getElementById("header").style.color = '#008000';
         header.innerHTML = "Home Wins!"
+        confetti()
         // document.getElementById("h3-el-home").style.textShadow = '5px 5px darkorange';
         // h3ElHome.innerHTML = "HOME"
         document.getElementById("home-score").className = "border"
@@ -83,6 +84,7 @@ function disable() {
         } else if (guestCounter >= 21 && guestCounter > 0) {
             document.getElementById("header").style.color = '#008000';
             header.innerHTML = "Guest Wins!"
+            confetti()
             // document.getElementById("h3-el-guest").style.textShadow = '5px 5px #008000';
             // h3ElGuest.innerHTML = "GUEST"
             document.getElementById("guest-score").className = "border"
