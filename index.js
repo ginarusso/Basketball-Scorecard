@@ -66,6 +66,15 @@ function reset() {
     btn3Guest.disabled = false
 }
 
+function disTrue() {
+    btn1Home.disabled = true
+    btn2Home.disabled = true
+    btn3Home.disabled = true
+    btn1Guest.disabled = true
+    btn2Guest.disabled = true
+    btn3Guest.disabled = true
+}
+
 function disable() {
     if (homeCounter >= 21 && homeCounter > 0) {
         document.getElementById("header").style.color = '#008000';
@@ -77,12 +86,7 @@ function disable() {
         document.getElementById("home-score").className = "border"
         document.getElementById("footer").style.backgroundColor = 'red';
         footerbtn.innerHTML = "RESET"
-        btn1Home.disabled = true
-        btn2Home.disabled = true
-        btn3Home.disabled = true
-        btn1Guest.disabled = true
-        btn2Guest.disabled = true
-        btn3Guest.disabled = true
+        disTrue()
         } else if (guestCounter >= 21 && guestCounter > 0) {
             document.getElementById("header").style.color = '#008000';
             audio.play()
@@ -93,12 +97,7 @@ function disable() {
             document.getElementById("guest-score").className = "border"
             document.getElementById("footer").style.backgroundColor = 'red';
             footerbtn.innerHTML = "RESET"
-            btn1Home.disabled = true
-            btn2Home.disabled = true
-            btn3Home.disabled = true
-            btn1Guest.disabled = true
-            btn2Guest.disabled = true
-            btn3Guest.disabled = true
+            disTrue()
             }
 }
 
