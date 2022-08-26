@@ -10,6 +10,7 @@ const btn1Guest = document.getElementById("btn1-guest")
 const btn2Guest = document.getElementById("btn2-guest")
 const btn3Guest = document.getElementById("btn3-guest")
 const footerbtn = document.getElementById("footer")
+const audio = new Audio('Buzzer.mp3')
 
 let homeCounter = 0;
 let guestCounter = 0;
@@ -68,6 +69,7 @@ function reset() {
 function disable() {
     if (homeCounter >= 21 && homeCounter > 0) {
         document.getElementById("header").style.color = '#008000';
+        audio.play()
         header.innerHTML = "Home Wins!"
         confetti()
         // document.getElementById("h3-el-home").style.textShadow = '5px 5px darkorange';
@@ -83,6 +85,7 @@ function disable() {
         btn3Guest.disabled = true
         } else if (guestCounter >= 21 && guestCounter > 0) {
             document.getElementById("header").style.color = '#008000';
+            audio.play()
             header.innerHTML = "Guest Wins!"
             confetti()
             // document.getElementById("h3-el-guest").style.textShadow = '5px 5px #008000';
