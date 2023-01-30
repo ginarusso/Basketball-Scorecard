@@ -1,29 +1,36 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <head>
+        <!-- <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'> -->
         <link rel="stylesheet" href="index.css">
-        <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     </head>
     <body>
         <header>
-            <h4 id="header">First to 21 Wins!!</h4>
+            <h4 id="header">First to 21 Wins!</h4>
+            <!-- <p id="countdown-timer">Start Game</p> -->
+            <!-- <button id="countdown-timer" class="footer-btn">Start Game</button> -->
         </header>
         <section>
-            <div class="container">
+            <div class="container" id="container-el" data-cont="">
                 <div>
-                    <h3 id="h3-el-home">HOME</h3>
+                    <h3>HOME</h3>
                     <p id="home-score" class="home">0</p>
-                    <button id="btn1-home" onclick="home1()">+1</button><button id="btn2-home" onclick="home2()">+2</button><button id="btn3-home" onclick="home3()">+3</button>
+                    <button id="btn" data-home-points="1">+1</button>
+                    <button id="btn" data-home-points="2">+2</button>
+                    <button id="btn" data-home-points="3">+3</button>
                 </div>
                 <div>
-                    <h3 id="h3-el-guest">GUEST</h3>
+                    <h3>GUEST</h3>
                     <p id="guest-score" class="guest">0</p>
-                    <button id="btn1-guest" onclick="guest1()">+1</button><button id="btn2-guest" onclick="guest2()">+2</button><button id="btn3-guest" onclick="guest3()">+3</button>
+                    <button id="btn" data-guest-points="1">+1</button>
+                    <button id="btn" data-guest-points="2">+2</button>
+                    <button id="btn" data-guest-points="3">+3</button>
                 </div>
             </div>
         </section>
             <footer>
-            <button id="footer" class="footer-btn" onclick="reset()">RESET</button>
+            <button id="reset" class="reset-btn" onclick="reset()">RESET</button>
             </footer>
         <script src="index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     </body>
 </html>
