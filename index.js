@@ -78,6 +78,7 @@ function showWinner() {
             header.textContent = "Guest Wins!"
             }
             confetti()
+            containerEl.setAttribute('style', 'pointer-events: none')
 }
 
 function confetti() {
