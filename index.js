@@ -58,6 +58,7 @@ function reset() {
     guestScore.classList.remove("highlight")
     homeScore.style.background = "#000000"
     guestScore.style.background = "#000000"
+    containerEl.setAttribute('style', 'pointer-events: auto')
     const buttons = document.getElementsByTagName("button")
     
     for (const button of buttons) {
