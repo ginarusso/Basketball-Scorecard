@@ -101,3 +101,32 @@ button {
 footer {
     margin-bottom: 30px
 }
+
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  header, footer, .container {
+    max-width: 90%;
+  }
+  
+  .container {
+    border-left: none;
+    border-right: none;
+  }
+  
+  .home, .guest {
+   width: 70px;
+   margin: 0 auto;
+   font-size: 50px;
+   line-height: 100px;
+}
+
+h3 {
+    font-size: 2rem;
+}
+  
+button {
+    padding: 10px;
+    margin: 40px 0;
+    cursor: pointer;
+    }
+}
