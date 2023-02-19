@@ -89,7 +89,7 @@ p, button {
 
 button {
     padding: 10px;
-    margin: 40px 10px;
+    margin-bottom: 40px;
     cursor: pointer;
 }
 
@@ -127,7 +127,7 @@ h3 {
   
 button {
     padding: 10px;
-    margin: 20px 0;
+    margin: 40px 0;
     cursor: pointer;
     }
 }
