@@ -35,7 +35,7 @@ footer {
 h4 {
     margin-bottom: 0;
     margin-top: 30px;
-    padding: 10px 0;
+    padding: 10px 10px;
 }
 
 .container {
@@ -89,7 +89,7 @@ p, button {
 
 button {
     padding: 10px;
-    margin-bottom: 40px;
+    margin: 40px 10px;
     cursor: pointer;
 }
 
