@@ -111,6 +111,7 @@ footer {
   .container {
     border-left: none;
     border-right: none;
+    height: 90vh;
   }
   
   .home, .guest {
@@ -126,7 +127,7 @@ h3 {
   
 button {
     padding: 10px;
-    margin: 40px 0;
+    margin: 100px 0;
     cursor: pointer;
     }
 }
