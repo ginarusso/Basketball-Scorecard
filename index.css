@@ -116,11 +116,11 @@ footer {
   
   .div-home {
     background-color: grey;
-    padding: 10px;
+    padding: 10px 0;
   }
   
   .div-guest {
-     padding: 10px; 
+     padding: 10px 0; 
   }
   
   .home, .guest {
