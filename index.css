@@ -114,6 +114,16 @@ footer {
     height: 60vh;
   }
   
+  .div-home {
+    background-color: grey;
+    padding: 10px;
+  }
+
+.div-guest {
+    background-color: grey;
+    padding: 10px;
+  }
+  
   .home, .guest {
    width: 70px;
    margin: 0 auto;
