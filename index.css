@@ -56,12 +56,19 @@ h4 {
 }
 
 .highlight {
-    box-shadow: 0 0 20px greenyellow;
+    box-shadow: 0 0 60px greenyellow;
 }
 
 /* .highlight-red {
     box-shadow: 0 0 20px red;
 } */
+
+.lead {
+    color: lightgreen;
+    text-shadow: -3px -1px red;
+
+    
+}
 
 .home, .guest {
    background: #000000;
