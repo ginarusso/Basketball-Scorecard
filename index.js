@@ -3,6 +3,8 @@ const guestScore = document.getElementById("guest-score")
 const header = document.getElementById("header")
 const container = document.querySelector(".container")
 const containerEl = document.getElementById("container-el")
+const homeLead = document.getElementById("home-lead")
+const guestLead = document.getElementById("guest-lead")
 const resetBtn = document.getElementById("reset")
 const audio = new Audio('Buzzer.mp3')
 
@@ -36,6 +38,8 @@ container.addEventListener("click", function (e) {
 function highlight() {
     homeScore.classList.toggle("highlight", homeCounter > guestCounter)
     guestScore.classList.toggle("highlight", guestCounter > homeCounter)
+    homeLead.classList.toggle("lead", homeCounter > guestCounter)
+    guestLead.classList.toggle("lead", guestCounter > homeCounter)
     
     if (homeCounter >= 21 || guestCounter >= 21) {
         const buttons = document.getElementsByTagName("button")
@@ -49,13 +53,15 @@ function highlight() {
 function reset() {
     homeCounter = 0
     guestCounter = 0 
-    homeScore.textContent = 0
-    guestScore.textContent = 0
+    homeScore.textContent = homeCounter
+    guestScore.textContent = guestCounter
     header.style.color = "red"
     header.style.textShadow = '-2px -2px #000000';
     header.innerHTML = "First to 21 Wins!"
     homeScore.classList.remove("highlight")
     guestScore.classList.remove("highlight")
+    homeLead.classList.remove("lead")
+    guestLead.classList.remove("lead")
     homeScore.style.background = "#000000"
     guestScore.style.background = "#000000"
     containerEl.setAttribute('style', 'pointer-events: auto')
