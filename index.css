@@ -56,7 +56,7 @@ h4 {
 }
 
 .highlight {
-    box-shadow: 0 0 60px greenyellow;
+    box-shadow: 0 0 30px greenyellow;
 }
 
 /* .highlight-red {
@@ -65,7 +65,7 @@ h4 {
 
 .lead {
     color: lightgreen;
-    text-shadow: -3px -1px red;
+    text-shadow: -1px -1px green;
 
     
 }
